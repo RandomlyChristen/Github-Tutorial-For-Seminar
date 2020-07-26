@@ -167,9 +167,46 @@ int main() {
 
 **하지만, 여러분이 했던 작업이 절대 날아간것이 아닙니다. 걱정하지마세요.**
 
-그리고 지금까지의 작업을 기록하겠습니다.
+그리고 지금까지의 작업을 기록하겠습니다. 추가될 파일은 없지만, 습관적으로 `add` 해줍니다.
+
+<a id='7949bf0'></a>
+```
+> git add .
+> git commit -m "내용2"
+
+[master 7949bf0] 내용2
+ 2 files changed, 55 insertions(+), 5 deletions(-)
+```
+
+3장에서는 좀 더 극단적으로, 위 소스파일을 삭제하고 새로운 파일을 작성합니다.
+
+Git이 파일이 삭제되어 추적할 필요가 없어짐을 알아차리게 하기 위해서는 아래 명령으로 파일의 삭제를 진행합니다.
 
 ```
-git add .
-git commit -m "내용2"
+> git rm test_program.cpp 
+
+rm 'test_program.cpp'
+```
+
+그리고 새 파일 `new_program.cpp`를 작성합니다.
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    cout << "완전히 다른 내용 3-1" << endl;
+    cout << "완전히 다른 내용 3-2" << endl;
+    cout << "완전히 다른 내용 3-3" << endl;
+
+    return 0;
+}
+```
+
+이번엔 하나의 파일이 삭제, 하나의 파일이 추가 그리고 변경사항이 기록되겠네요.
+
+```
+> git add .
+> git commit -m "내용3"
 ```
