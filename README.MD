@@ -206,7 +206,20 @@ int main() {
 
 이번엔 하나의 파일이 삭제, 하나의 파일이 추가 그리고 변경사항이 기록되겠네요.
 
+<a id='9d950e4'></a>
 ```
 > git add .
 > git commit -m "내용3"
+
+[master 9d950e4] 내용3
+ 3 files changed, 51 insertions(+), 15 deletions(-)
+ create mode 100644 new_program.cpp
+ delete mode 100644 test_program.cpp
+```
+
+지금까지의 내용을 Github 원격저장소에 업로드 해보겠습니다.
+
+```
+git commit -m "첫번째 푸쉬"
+git push origin master
 ```
