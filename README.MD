@@ -220,6 +220,58 @@ int main() {
 지금까지의 내용을 Github 원격저장소에 업로드 해보겠습니다.
 
 ```
-git commit -m "첫번째 푸쉬"
-git push origin master
+> git commit -m "첫번째 푸쉬"
+
+[master 2cf29f0] 첫번째 푸쉬
+ 1 file changed, 13 insertions(+)
+
+> git push origin master
+
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (22/22), 84.28 KiB | 21.07 MiB/s, done.
+Total 22 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/RandomlyChristen/Github-Tutorial-For-Seminar.git
+ * [new branch]      master -> master
+```
+
+지금까지로의 결과물로 Github에 접속하면 우리는 `new_program.cpp`와 `README.MD` 그리고 이미지파일들만 확인 할 수 있습니다.
+
+![지금까지 깃허브](image/screenshot1.png)
+
+이제 ~~마법~~을 통해 클릭 몇번으로 이전 내용의 프로젝트를 확인할 수 있게 해보겠습니다.
+
+우선 우리는 프로젝트에서 **3번의 주요 저장지점**이 있었습니다.
+
+1. [요기랑](#b6836f0)
+1. [요기](#7949bf0)
+1. [그리고 요기](#9d950e4)
+
+이 세 구간에대해 독립적인 분기점을 만들어 줄 수 있습니다. 바로 Branch를 통해서요. 
+
+아래 명령을 입력하면, 특정 Commit에서 Branch를 생성합니다.
+
+```
+> git branch "Branch 이름" "Commit SHA"
+```
+
+Commit 명령 이후에 출력되는 `[master b6836f0] 내용1 ...`에서 `b6836f0`가 바로 Commit SHA 값입니다.
+
+이를 이용하면 아래를 생각해볼 수 있습니다.
+
+```
+> git branch "ch1" "b6836f0"
+> git branch "ch2" "7949bf0"
+> git branch "ch3" "9d950e4"
+```
+
+이제 해당 브랜치로 이동할 수 있습니다.
+
+```
+> git checkout "ch1"
+> git checkout "ch2"
+> git checkout "ch3"
 ```
