@@ -123,3 +123,53 @@ int main() {
 내용 1-4
 내용 1-5
 ```
+
+그리고 이 파일을 비롯하여, 이 디렉토리 내의 모든 파일을 Git이 추적하게 하기 위해 아래 명령을 터미널에 입력합니다.
+
+```
+> git add .
+```
+
+그리고 Commit을 통해 변동사항을 기록합니다.
+
+<a id='b6836f0'></a>
+```
+> git commit -m "내용1"
+
+[master b6836f0] 내용1
+ 5 files changed, 86 insertions(+), 1 deletion(-)
+ create mode 100644 image/0_k7SKKyyBpytE9jw4.jpg
+ create mode 100644 image/git-branches-merge.png
+ create mode 100644 image/lifecycle.png
+ create mode 100644 test_program.cpp
+```
+
+`README.MD`에서 보여질 이미지파일을 비롯하여 우리의 프로그램이 정성적으로 Commit되었습니다.
+
+이제 `test_program.cpp`를 아래와 같이 변경해야한다고 하죠.
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    cout << "내용 2-1" << endl;
+    cout << "내용 2-2" << endl;
+    cout << "내용 2-3" << endl;
+    return 0;
+}
+```
+
+1장 내용을 모두 지우고, 2장 내용을 입력했습니다. 소단원이 3개밖에 없네요 개꿀이죠? 하지만 여러분들은 이렇게 생각합니다.
+
+> _"열심히 작성했던 코드를 모두 지워야 하다니... 거기다가 다른 사람은 이 내용을 보지 못하잖아!!"_
+
+**하지만, 여러분이 했던 작업이 절대 날아간것이 아닙니다. 걱정하지마세요.**
+
+그리고 지금까지의 작업을 기록하겠습니다.
+
+```
+git add .
+git commit -m "내용2"
+```
