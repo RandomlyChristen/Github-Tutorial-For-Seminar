@@ -272,6 +272,46 @@ Commit 명령 이후에 출력되는 `[master b6836f0] 내용1 ...`에서 `b6836
 
 ```
 > git checkout "ch1"
+
+Switched to branch 'ch1'
+
 > git checkout "ch2"
+
+Switched to branch 'ch2'
+
 > git checkout "ch3"
+
+Switched to branch 'ch3'
+
+> git checkout master
+
+Switched to branch 'master'
 ```
+
+반갑게도 그 때 그 모습 그대로내요!! 추억돋습니다. 이제 생성된 Branch를 Github Remote에 Push 해주면 됩니다.
+
+```
+> git push origin ch1:ch1
+
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'ch1' on GitHub by visiting:
+remote:      https://github.com/RandomlyChristen/Github-Tutorial-For-Seminar/pull/new/ch1
+remote: 
+To https://github.com/RandomlyChristen/Github-Tutorial-For-Seminar.git
+ * [new branch]      ch1 -> ch1
+
+ > git push origin ch2:ch2
+
+ ...
+
+ > git push origin ch3:ch3
+
+ ...
+```
+
+이제 Github에서 확인해볼 수 있습니다. `master`외의 3개의 Branch가 있는것을 확인할 수 있네요.
+
+![브랜치 생성완료 이미지](image/screenshot2.png)
+
+**소스코드와 파일의 변경내용을 직접 확인해보세요!!**
